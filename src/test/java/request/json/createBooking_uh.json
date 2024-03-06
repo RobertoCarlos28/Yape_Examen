@@ -1,0 +1,10 @@
+{
+  "firstname" : "{{firstname}}",
+  "totalprice" : "{{totalprice}}",
+  "depositpaid" : true,
+  "bookingdates" : {
+    "checkin" : "{{checkin}}",
+    "checkout" : "{{checkout}}"
+  },
+  "additionalneeds" : "{{additionalneeds}}"
+}

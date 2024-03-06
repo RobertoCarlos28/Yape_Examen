@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class RESTFUL - BOOKER #9</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class RESTFUL - BOOKER #9</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; RESTFUL - BOOKER #9</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">2.428s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">[CP013]  Validar que no se pueda actualizar una reserva eliminada</td>
+<td class="success">2.428s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@Un_Happy_Paths_03
+Escenario: [CP013]  Validar que no se pueda actualizar una reserva eliminada ?[90m# src/test/resources/features/Booking/UnHappyPaths.feature:36?[0m
+  ?[32mDado ?[0m?[32mconfiguro los headers update?[0m                                          ?[90m# stepdefinitions.BookingStepDefinition.configuroLosHeadersUpdate(io.cucumber.datatable.DataTable)?[0m
+    | Accept           | Cookie       | Authorization                  |
+    | application/json | token=abc123 | Basic YWRtaW46cGFzc3dvcmQxMjM= |
+  ?[32mY ?[0m?[32mconfiguro body request create ?[0m?[32m?[1m&quot;createBooking.json&quot;?[0m                       ?[90m# stepdefinitions.BookingStepDefinition.configuroBodyRequestCreate(java.lang.String,io.cucumber.datatable.DataTable)?[0m
+    | firstname | lastname | totalprice | checkin    | checkout   | additionalneeds |
+    | Roberto   | Mechan   | 3000       | 2025-11-07 | 2025-11-07 | Breakfast       |
+Request method:	PUT
+Request URI:	https://restful-booker.herokuapp.com/booking/122
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=application/json
+				Cookie=token=abc123
+				Authorization=Basic YWRtaW46cGFzc3dvcmQxMjM=
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;firstname&quot;: &quot;Roberto&quot;,
+    &quot;lastname&quot;: &quot;Mechan&quot;,
+    &quot;totalprice&quot;: &quot;3000&quot;,
+    &quot;depositpaid&quot;: true,
+    &quot;bookingdates&quot;: {
+        &quot;checkin&quot;: &quot;2025-11-07&quot;,
+        &quot;checkout&quot;: &quot;2025-11-07&quot;
+    },
+    &quot;additionalneeds&quot;: &quot;Breakfast&quot;
+}
+HTTP/1.1 405 Method Not Allowed
+Server: Cowboy
+Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1709735749&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=E6IMYaP2O83oWQQTX8LBc%2B1O%2FIPQ87AGN1Uu0swbJ8Q%3D&quot;}]}
+Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1709735749&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=E6IMYaP2O83oWQQTX8LBc%2B1O%2FIPQ87AGN1Uu0swbJ8Q%3D
+Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8
+Content-Length: 18
+Etag: W/&quot;12-UGJMK66P4abaBlq0vKHJaCKuGCA&quot;
+Date: Wed, 06 Mar 2024 14:35:49 GMT
+Via: 1.1 vegur
+
+Method Not Allowed
+  ?[32mY ?[0m?[32mconfiguro la url put ?[0m?[32m?[1m&quot;booking/122&quot;?[0m                                       ?[90m# stepdefinitions.BookingStepDefinition.configuroLaUrlPut(java.lang.String)?[0m
+  ?[32mEntonces ?[0m?[32mel codigo de respuesta es ?[0m?[32m?[1m&quot;405&quot;?[0m                                   ?[90m# stepdefinitions.BookingStepDefinition.elCodigoDeRespuesta(java.lang.String)?[0m
+La respuesta del servicio es:Method Not Allowed
+  ?[32mY ?[0m?[32mvalido la respuesta de la api ?[0m?[32m?[1m&quot;Method Not Allowed&quot;?[0m                       ?[90m# stepdefinitions.BookingStepDefinition.validoLaRespuestaDeLaAPi(java.lang.String)?[0m
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0</a> at 6 mar. 2024 09:35:49</p>
+</div>
+</div>
+</body>
+</html>
