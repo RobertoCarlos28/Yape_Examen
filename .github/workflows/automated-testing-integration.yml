@@ -5,14 +5,6 @@ on:
     branches:
       - main
 
-  schedule:
-    - cron: "00 13 * * TUE"
-  workflow_dispatch:
-
-env:
-  project_name: "api-automation-solution-reto-qa"
-  language: "java"
-
 jobs:
   integration-api-test:
     runs-on: ubuntu-latest
@@ -23,23 +15,3 @@ jobs:
           distribution: temurin
           java-version: 17
           cache: gradle
-
-      - name: Run integration test
-        uses: gradle/gradle-build-action@v2
-        with:
-          arguments: test
-      - uses: gradle/gradle-build-action@v2
-        with:
-          arguments: check
-      - name: Generate reports
-        run: ./gradlew reports
-
-      - name: Upload reports automation testing
-        if: ${{ always() }}
-        uses: actions/upload-artifact@v3
-        with:
-          name: testing-reports
-          path: |
-            target/site/serenity/serenity-summary.html
-            target/site/serenity/results.csv
-          retention-days: 1
