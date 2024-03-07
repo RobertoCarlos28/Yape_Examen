@@ -9,7 +9,7 @@ Necesidad del negocio:  Generar token de autenticación
 
 Regla: El token expira cada 10 minutos
 
-  @create_token
+  @TestBookingIntegracion
   Escenario: [CP002] - Realizar la authentication del servicio Auth
     Dado configuro los headers
       | Content-Type     |

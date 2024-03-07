@@ -8,7 +8,7 @@ Característica: RESTFUL - BOOKER
                          Quiero tener un mapeo de errores del sistema
                          Para confirmar que el funcionamiento del servicio corresponde al esperado por negocio
 
-  @Un_Happy_Paths_01
+  @TestBookingIntegracion
       #Status code: 500 Internal Server Error
   Escenario: [CP011] - Validar que no se pueda crear un reserva al no enviar un campo obligatorio
     Dado configuro los headers
@@ -21,7 +21,7 @@ Característica: RESTFUL - BOOKER
     Entonces el codigo de respuesta es "500"
     Y valido la respuesta de la api "Internal Server Error"
 
-  @Un_Happy_Paths_02
+  @TestBookingIntegracion
      # status code: 404 Not Found
   Escenario: [CP012] Validar que no se pueda consultar una reserva eliminada
     Dado configuro los headers delete
@@ -31,7 +31,7 @@ Característica: RESTFUL - BOOKER
     Entonces el codigo de respuesta es "404"
     Y valido la respuesta de la api "Not Found"
 
-  @Un_Happy_Paths_03
+  @TestBookingIntegracion
      # status code: 405 Method Not Allowed
   Escenario: [CP013]  Validar que no se pueda actualizar una reserva eliminada
     Dado configuro los headers update

@@ -7,7 +7,7 @@ Necesidad del negocio: Actualizar una reserva
                        Quiero actualizar la información de mi reserva
                        Para poder actualizar y eliminar reservas
 
-  @partial_update_booking
+  @TestBookingIntegracion
   Escenario: [CP009] - Validar la actualización parcial una reserva actual
     Dado configuro los headers update
       | Accept           | Cookie           | Authorization                   |

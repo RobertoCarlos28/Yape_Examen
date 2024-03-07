@@ -7,7 +7,7 @@ Necesidad del negocio:  Confirmar funcionamiento de la api
                         Quiero hacer validacion
                         Para confirmar si la api restful-booker se encuentra en funcionamiento
 
-  @health_booking
+  @TestBookingIntegracion
   Escenario: [CP001] - Confirmar si la api esta en funcionamiento
     Dado Tengo que validar la comprobacion de estado
     Y configuro la url get "ping"

@@ -7,7 +7,7 @@ Necesidad del negocio: Consultar una reserva
                        Quiero consultar la información de una reserva
                        Para validar que la reservación se realizó correctamente
 
-  @bookings_x_id
+  @TestBookingIntegracion
   Escenario: [CP007] - Validar que se puedan consultar una reserva por id
     Dado configuro los headers
       | Accept           |

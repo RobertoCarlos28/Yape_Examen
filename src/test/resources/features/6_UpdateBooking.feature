@@ -7,7 +7,7 @@ Necesidad del negocio: Actualizar una reserva
                        Quiero actualizar la información de mi reserva
                        Para poder actualizar y eliminar reservas
 
-  @update_booking
+  @TestBookingIntegracion
   Escenario: [CP008] - Validar la actualización de una reserva actual
     Dado configuro los headers update
       | Accept           | Cookie           | Authorization                   |

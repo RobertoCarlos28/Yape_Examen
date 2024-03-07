@@ -7,13 +7,13 @@ Necesidad del negocio: Consultar una reserva
                        Quiero consultar la información de una reserva
                        Para validar que la reservación se realizó correctamente
 
-  @bookings_ids_01
+  @TestBookingIntegracion
   Escenario: [CP004] - Validar que se puedan consultar todas las reservas existentes
     Dado configuro el api
     Y configuro la url get "booking"
     Entonces el codigo de respuesta es "200"
 
-  @bookings_ids_02
+  @TestBookingIntegracion
   Escenario: [CP005] - Validar que se puedan consultar una reserva por nombre y apellido
     Dado configuro los query params
       |firstname | lastname |
@@ -21,7 +21,7 @@ Necesidad del negocio: Consultar una reserva
     Y configuro la url get "booking"
     Entonces el codigo de respuesta es "200"
 
-  @bookings_ids_03
+  @TestBookingIntegracion
   Escenario: [CP006] - Validar que se puedan consultar una reserva por fechas especificas
     Dado configuro los query params
       |checkin       | checkout    |

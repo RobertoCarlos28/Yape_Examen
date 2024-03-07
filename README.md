@@ -61,12 +61,12 @@ automatización desarrollado.
 
 La ruta del pipeline se encuentra en: `.github/workflows/automated-testing-integration.yml`
 
-| develop                    | status                                                                                                                                                                                                                                                                                                 |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Pruebas de integración** | [![automated-testing-integration ST](https://github.com/CAMIDIMAS18/api-automation-solution-reto-qa/actions/workflows/automated-testing-integration.yml/badge.svg?branch=develop)](https://github.com/CAMIDIMAS18/api-automation-solution-reto-qa/actions/workflows/automated-testing-integration.yml) |
+| develop                    | status                                                                                                                                                                                                                                                                      |
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Pruebas de integración** | [![automated-testing-integration ST](https://github.com/RobertoCarlos28/Yape_Examen_API/actions/workflows/automated-testing-integration.yml/badge.svg?branch=main)](https://github.com/RobertoCarlos28/Yape_Examen_API/actions/workflows/automated-testing-integration.yml) |
 
 **⏱️ Ejecución automatizada**:   
-El pipepile se ejecutará periódicamente de forma automática por medio la siguiente 'cron schedule expression':
+El pipeline se ejecutará periódicamente de forma automática por medio la siguiente 'cron schedule expression':
 
 ```yml
 on:
@@ -83,50 +83,51 @@ resultados de esa ejecución realizada.
 
 ### 🧪 Casos de prueba contemplados
 
-Test diseñados para validar los escenarios **Happy Paths** 😃
+Test diseñados para validar los escenarios **Happy Paths**
 
-> **✨ FEATURE**: Booking | Confirmar funcionamiento de la api
-> - [x] [YP-001] Confirmar si la api está en funcionamiento
+> **✨ FEATURE**: Booking | Health Check
+> - [x] [CP001] - Confirmar si la api esta en funcionamiento
 >
-> **✨ FEATURE**: Booking | Generar token de autenticación
-> - [x] [YP-002] Validar la creación de token de autenticación
+> **✨ FEATURE**: Booking | Create Token
+> - [x] [CP002] - Realizar la authentication del servicio Auth
 >
-> **✨ FEATURE**: Booking | Crear una reserva
-> - [x] [YP-003] Validar la creación de una nueva reserva
+> **✨ FEATURE**: Booking | Create Booking
+> - [x] [CP003] - Validar la creación de una reserva
 >
-> **✨ FEATURE**: Booking | Consultar una reserva
-> - [x] [YP-004] Validar que se pueda consultar una reserva por su BookingId
-> - [x] [YP-005] Validar que se puedan consultar todas las reservas existentes
-> - [x] [YP-006] Validar que se pueda consultar una reserva por los nombres del cliente
-> - [x] [YP-007] Validar que se pueda consultar una reserva por un rango de fechas específicas
-> - [x] [YP-008] Ver todos los ID's de las reservas consultando por fechas específicas
+> **✨ FEATURE**: Booking | Get Booking IDs
+> - [x] [CP004] - Validar que se puedan consultar todas las reservas existentes
+> - [x] [CP005] - Validar que se puedan consultar una reserva por nombre y apellido
+> - [x] [CP006] - Validar que se puedan consultar una reserva por fechas especificas
 >
-> **✨ FEATURE**: Booking | Actualizar una reserva
-> - [x] [YP-009] Validar la actualización de una reserva actual
-> - [x] [YP-010] Validar la actualización parcial una reserva actual
+> **✨ FEATURE**: Booking | Get Booking x ID
+> - [x] [CP007] - Validar que se puedan consultar una reserva por id
 >
-> **✨ FEATURE**: Booking | Eliminar una reserva
-> - [x] [YP-011] Validar la eliminación de una reserva actual
+> **✨ FEATURE**: Booking | Update Booking
+> - [x] [CP008] - Validar la actualización de una reserva actual
+> 
+> > **✨ FEATURE**: Booking | Partial Update Booking
+> - [x] [CP009] - Validar la actualización parcial una reserva actual
+>
+> **✨ FEATURE**: Booking | Delete Booking
+> - [x] [CP10] - Validar la eliminación de una reserva actual
 ***
-Test diseñados para validar los escenarios **UNHappy Paths** 🤡
+Test diseñados para validar los escenarios **UNHappy Paths**
 
 > **✨ FEATURE**: UnHappy Paths | Validar que no se puedan crear/consultar/actualizar/eliminar reservas
-> - [x] [YP-012] Validar que no se pueda crear un reserva al no enviar un campo obligatorio
-> - [x] [YP-013] Validar que no se pueda consultar una reserva eliminada
-> - [x] [YP-014] Validar que no se pueda actualizar una reserva eliminada
-> - [x] [YP-015] Validar que no se pueda eliminar una reserva sin estar autenticado
+> - [x] [CP011] - Validar que no se pueda crear un reserva al no enviar un campo obligatorio
+> - [x] [CP012] Validar que no se pueda consultar una reserva eliminada
+> - [x] [CP013]  Validar que no se pueda actualizar una reserva eliminada
 ***
 
 ## ▶️ Ejecución del proyecto:
 
 1. Descarga el proyecto desde GitHub
-    * **Opción 1** (HTTPS): `https://github.com/CAMIDIMAS18/api-automation-solution-reto-qa.git`
-    * **Opción 2** (SSH): `git@github.com:CAMIDIMAS18/api-automation-solution-reto-qa.git`
-    * **Opción 3:** Descárgalo como archivo Zip y extráelo
+    * **Opción 1** (HTTPS): `https://github.com/RobertoCarlos28/Yape_Examen_API.git`
+    * **Opción 2:** Descárgalo como archivo Zip y extráelo
 
 ***
 
-2. **CD** en la carpeta `api-automation-solution-reto-qa > serenity-restful-booker-reto`.
+2. **CD** en la carpeta `Proyecto_API_YAPE > YapeProject`.
 3. Configurar Gradle
     * Ejecute el siguiente comando en el terminal:`./gradlew build`.
 
@@ -137,10 +138,10 @@ Test diseñados para validar los escenarios **UNHappy Paths** 🤡
       comando:
 
     ```bash
-    gradle clean test --no-build-cache -Denvironment=dev -Dcucumber.filter.tags="@integrationTest"
+    gradle clean test --no-build-cache -Dcucumber.filter.tags="@TestBookingIntegracion"
     ```
 
-* **Opción 2**: Ir a las clases de la carpeta **runners** `src/test/java/org/api/testing/demo/runners` y ejecutar
+* **Opción 2**: Ir a las clases de la carpeta **runners** `src/test/java/runner` y ejecutar
   cada Runner.
 
 ***
@@ -160,4 +161,10 @@ Este comando permitirá generar ambos reportes:
 ./gradlew reports
 ```
 
+***
+### ENTEGRABLES DE PRUEBAS
+> ☑️ Colección en postman, la ruta de su ubicación es: `resources/PlanPruebas/restful-booker-collection.postman_collection.json`  
+> ☑️ El plan de pruebas actual, la ruta de su ubicación es: `resources/PlanPruebas/PLAN_DE_PRUEBAS.markdown`  
+> ☑️ El informe del resultado de pruebas, la ruta de su ubicación es: `target/site/serenity/serenity-summary.html`
+>
 ***

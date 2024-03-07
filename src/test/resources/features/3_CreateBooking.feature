@@ -7,7 +7,7 @@ Necesidad del negocio:  Crear una reserva
                         Quiero hacer una reserva
                         Para poder programar mi próximo viaje
 
-  @create_booking
+  @TestBookingIntegracion
   Escenario: [CP003] - Validar la creación de una reserva
     Dado configuro los headers
       | Accept           |
