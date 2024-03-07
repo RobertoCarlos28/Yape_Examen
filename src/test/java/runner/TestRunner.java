@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(publish = true,
         features = "src/test/resources/features", //Directorio de nuestros archivos .feature
         glue ="stepdefinitions", // Paquete donde tenemos nuestras clases
-        tags = "@Un_Happy_Paths_03",
+        tags = "@Un_Happy_Paths_01",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 
 )
