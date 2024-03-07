@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RESTFUL - BOOKER #9" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-06T14:35:46" hostname="PE-IT001279.bbrouter" time="2.428">
+<testsuite name="RESTFUL - BOOKER #9" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-07T15:40:13" hostname="PE-IT001279.bbrouter" time="2.181">
   <properties/>
-  <testcase name="[CP013]  Validar que no se pueda actualizar una reserva eliminada" classname="RESTFUL - BOOKER #9" time="2.428"/>
-  <system-out><![CDATA[
-@Un_Happy_Paths_03
-Escenario: [CP013]  Validar que no se pueda actualizar una reserva eliminada ?[90m# src/test/resources/features/Booking/UnHappyPaths.feature:36?[0m
-  ?[32mDado ?[0m?[32mconfiguro los headers update?[0m                                          ?[90m# stepdefinitions.BookingStepDefinition.configuroLosHeadersUpdate(io.cucumber.datatable.DataTable)?[0m
-    | Accept           | Cookie       | Authorization                  |
-    | application/json | token=abc123 | Basic YWRtaW46cGFzc3dvcmQxMjM= |
-  ?[32mY ?[0m?[32mconfiguro body request create ?[0m?[32m?[1m"createBooking.json"?[0m                       ?[90m# stepdefinitions.BookingStepDefinition.configuroBodyRequestCreate(java.lang.String,io.cucumber.datatable.DataTable)?[0m
-    | firstname | lastname | totalprice | checkin    | checkout   | additionalneeds |
-    | Roberto   | Mechan   | 3000       | 2025-11-07 | 2025-11-07 | Breakfast       |
-Request method:	PUT
+  <testcase name="[CP013]  Validar que no se pueda actualizar una reserva eliminada" classname="RESTFUL - BOOKER #9" time="2.181"/>
+  <system-out><![CDATA[Request method:	PUT
 Request URI:	https://restful-booker.herokuapp.com/booking/122
 Proxy:			<none>
 Request params:	<none>
@@ -38,25 +29,35 @@ Body:
 }
 HTTP/1.1 405 Method Not Allowed
 Server: Cowboy
-Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1709735749&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=E6IMYaP2O83oWQQTX8LBc%2B1O%2FIPQ87AGN1Uu0swbJ8Q%3D"}]}
-Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1709735749&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=E6IMYaP2O83oWQQTX8LBc%2B1O%2FIPQ87AGN1Uu0swbJ8Q%3D
+Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1709826015&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=XmB70SRrmzYyEgldzjzrOKVY4tWyLYNCBKLG3lR5c24%3D"}]}
+Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1709826015&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=XmB70SRrmzYyEgldzjzrOKVY4tWyLYNCBKLG3lR5c24%3D
 Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
 Connection: keep-alive
 X-Powered-By: Express
 Content-Type: text/plain; charset=utf-8
 Content-Length: 18
 Etag: W/"12-UGJMK66P4abaBlq0vKHJaCKuGCA"
-Date: Wed, 06 Mar 2024 14:35:49 GMT
+Date: Thu, 07 Mar 2024 15:40:15 GMT
 Via: 1.1 vegur
 
 Method Not Allowed
-  ?[32mY ?[0m?[32mconfiguro la url put ?[0m?[32m?[1m"booking/122"?[0m                                       ?[90m# stepdefinitions.BookingStepDefinition.configuroLaUrlPut(java.lang.String)?[0m
-  ?[32mEntonces ?[0m?[32mel codigo de respuesta es ?[0m?[32m?[1m"405"?[0m                                   ?[90m# stepdefinitions.BookingStepDefinition.elCodigoDeRespuesta(java.lang.String)?[0m
 La respuesta del servicio es:Method Not Allowed
-  ?[32mY ?[0m?[32mvalido la respuesta de la api ?[0m?[32m?[1m"Method Not Allowed"?[0m                       ?[90m# stepdefinitions.BookingStepDefinition.validoLaRespuestaDeLaAPi(java.lang.String)?[0m
 ]]></system-out>
-  <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
-SLF4J(W): Defaulting to no-operation (NOP) logger implementation
-SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+  <system-err><![CDATA[[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+[CP013]  Validar que no se pueda actualizar una reserva eliminada(restful---booker;[cp013]--validar-que-no-se-pueda-actualizar-una-reserva-eliminada)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+[CP013]  Validar que no se pueda actualizar una reserva eliminada
+----------------------------------------------------------------------
 ]]></system-err>
 </testsuite>
